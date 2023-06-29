@@ -7,18 +7,12 @@ compatibility_date = "2022-11-30"
 command = "npm run build"
 
 [vars]
-# Sensitive data should be stored in the worker itself as an encrypted value... in other terms: NOT IN THIS FILE!
-# Method 1 is to use the `wrangler` command: `wrangler secret put <key>` where key is the environment variable name
-# Method 2 is to put them in through the workers dashboard
-#
-# Sensitive environment variables:
-# - DISCORD_ID          - Your Discord application's ID
-# - DISCORD_PUBLIC_KEY  - Your Discord application's public key
-# - DISCORD_TOKEN       - Your Discord application's token
-# - TWILIO_ACCOUNT_SID  - Your Twilio account SID
-# - TWILIO_AUTH_TOKEN   - Your Twilio auth token
-# - TWILIO_PHONE_NUMBER - The phone number you want to call from. You must own this through Twilio
-# - MY_PHONE_NUMBER     - Your phone number
-# All sensitive variables get a default value of "" just so the worker doesn't crash
+DISCORD_ID=1123989427916636292
+DISCORD_PUBLIC_KEY=130791256841129a40f99b013831211707ced13730bb4469dce876383c8f54c8
+DISCORD_TOKEN=https://discord.com/api/oauth2/authorize?client_id=1123989427916636292&permissions=8&scope=bot
+TWILIO_ACCOUNT_SID=AC81d06ce360e9854c4cd8b08c78bd3072
+TWILIO_AUTH_TOKEN=8184b00b1280523640b6acf028b9af1e
+TWILIO_PHONE_NUMBER=12405404043
+MY_PHONE_NUMBER=919640440407
 
 FALLBACK_URL = "https://github.com/biaw/phone" # Fallback URL for when a user types the worker address
